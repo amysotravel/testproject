@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Tower Mappings</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	
+<script src="java.js" async></script>
+<link rel="stylesheet" href="style2.css">
+</head>
+<body >
+<div class="container">
+  <div class="row">
+	      <div class="col-sm-4 header">
+      <div class="page-header text-center header"> <img src="Images/sgslogo2.jpg" > </div>
+    </div>
+    <div class="col-sm-8 header" >
+      <div class="page-header text-center">
+        <h3 class="text-center">Monopole 
+          Mappings</h3>
+      </div>
+    </div>
+
+    <div class="col-sm-12 ">
+      <h3>Job Information</h3>
+    </div>
+    <div class="col-sm-3 "> </div>
+    <div class="col-sm-6 ">
+      <label class="control-label" for="sgsJob">SGS Job Number</label>
+      <input class ="form-control"  type="number" id="sgsJob" name="sgsJob" >
+      
+    </div>
+	  <div class="col-sm-12 ">
+     <hr>
+    </div>
+    <div class="col-sm-12 ">
+      <h3>Foundation</h3>
+    </div>
+    <div class="col-sm-4 ">
+      <label for="fndShape">Foundation 
+        Shape </label>
+      <select class="form-control selectpicker"  name="fndShape" id="fndShape">
+        <option value="360">round</option>
+        <option value="4">4-sided</option>
+        <option value="6">6-sided</option>
+        <option value="8">8-sided</option>
+      </select>
+    </div>
+   
+	  <div class="col-sm-4 ">
+      <label for="fndMeasurmentType">Type of Measurement<br>
+for Foundation Size</label>
+     
+     
+          <select class="form-control selectpicker" name="fndMeasurementType" id="fndMeasurmentType" >
+
+            <option value="0">Diameter flat to flat</option>
+            <option value="1">Diameter Point to Point</option>
+            <option value="2">Flat Width</option>
+          </select>
+		 
+        <!--   <div class=" col-sm-4">
+            <input class="form-control" type="number" id="fndDiaMeasurment" name="fndDiaMeasurment">
+            <div class="input-group-append"> <span class="input-group-text">in</span> </div>
+            <label for="fndDiaMeasurment">in</label>
+          </div>-->
+        <div class="input-group mb-3">
+          <input class="form-control" type="number" id="fndDiaMeasurment" name="fndDiaMeasurment">
+          <div class="input-group-append"> <span class="input-group-text">in</span> </div>
+        </div>
+    
+    </div>
+    <div class="col-sm-4">
+      <label for="fndThickness">Foundation projection 
+above Ground</label>
+      <br>
+     <div class="input-group mb-3"> <input class="form-control" type="number" 
+			 id="fndThickness" name="fndThickness" >
+		  <div class="input-group-append"> <span class="input-group-text">in</span> </div>
+      </div>
+      <!--  <label for="fndThickness">in</label>--> 
+		 
+    </div>
+    <div class="col-sm-12">
+      <hr>
+      <h3>Baseplate</h3>
+    </div>
+    <div class="col-sm-4 ">
+      <label for="bpShape">Baseplate
+        Shape</label>
+      <select class="form-control" name="bpShape" id="bpShape" >
+        <option value="360">round</option>
+        <option value="4">4-sided</option>
+        <option value="6">6-sided</option>
+        <option value="8">8-sided</option>
+      </select>
+    </div>
+    <div class="col-sm-4 ">
+      <label for="bpMeasurmentType">Type of Measurement for Baseplate Size</label>
+		
+		
+      <select class="form-control selectpicker" name="bpMeasurementType" id="bpMeasurmentType">
+        <option value="0">Diameter flat to flat</option>
+        <option value="1">Diameter Point to Point</option>
+        <option value="2">Flat</option>
+      </select>
+		
+		 <div class="input-group mb-3">
+      <input class="form-control" type="number" id="bpDiaMeasurment" name="bpDiaMeasurment">
+      <div class="input-group-append"> <span class="input-group-text">in</span> </div>
+		</div>
+      <!-- <label for="bpDiaMeasurment">in</label>--> 
+      
+    </div>
+    <div class="col-sm-4 ">
+      <label for="bpThickness3">Baseplate
+        Thickness</label>
+      <br>
+       <div class="input-group mb-3">
+		<input class="form-control" type="number" id="bpThickness" name="bpThickness">
+      <div class="input-group-append"> <span class="input-group-text">in</span> </div>
+	  </div>
+      <!-- <label for="bpThickness">in</label>--> 
+    </div>
+    <div class="col-sm-12">
+      <hr>
+      <h3>Anchor Rod</h3>
+    </div>
+    <div class="col-sm-4 ">
+      <label for="arQty">AR Quantity</label>
+      <div class="input-group mb-3">
+		<input class="form-control" type="number" id="arQty" name="arQty">
+		  <div class="input-group-append"> <span class="input-group-text">in</span> </div></div>
+    <!--  <label for="arQty">ea</label>-->
+    </div>
+    <div class="col-sm-4 ">
+      <label for="arDia">AR Dia</label>
+      <br>
+      <div class="input-group mb-3">
+		<input class="form-control" type="number" id="arDia" name="arDia">
+      <div class="input-group-append"> <span class="input-group-text">in</span> </div>
+	  </div>
+  <!--    <label for="arDia">in</label>-->
+    </div>
+    <div class="col-sm-4 ">
+      <label for="arMeasurementType">Bolt Cirle type </label>
+      <select class="form-control selectpicker" name="arMeasurementType" id="arMeasurementType">
+        <option value="1">Diameter</option>
+        <option value="2">Bolt to Bolt</option>
+      </select>
+      <div class="input-group mb-3">
+		<input class="form-control" type="number" id="arDiaMeasurement" name="arDiaMeasurement">
+      <div class="input-group-append"> <span class="input-group-text">in</span> </div>
+	  </div>
+   <!--   <label for="arDiaMeasurement">in</label>-->
+    </div>
+    <div class="col-sm-12">
+      <hr>
+      <h3>Pole</h3>
+    </div>
+    <div class="col-sm-6 ">
+      <label for="pShape">Pole Shape</label>
+      <select class="form-control" name="pShape" id="pShape">
+        <option value="360">round</option>
+        <option value="8">8-sided</option>
+        <option value="12">12-sided</option>
+        <option value="18">18-sided</option>
+      </select>
+    </div>
+    <div class="col-sm-6 ">
+      <label for="pMeasurmentType">Type of Measurement for Pole</label>
+      <select class="form-control selectpicker" name="pMeasurementType" id="pMeasurmentType">
+        <option value="0">Diameter flat to flat</option>
+        <option value="1">Diameter Point to Point</option>
+        <option value="2">Flat Width</option>
+      </select>
+    <div class="input-group mb-3">   <input class="form-control" type="number" id="pDiaMeasurment" name="pDiaMeasurment">
+		<div class="input-group-append"> <span class="input-group-text">in</span> </div></div>
+<!--      <label for="pDiaMeasurment">in</label>-->
+    </div>
+    <div class="col-sm-12">
+      <h3>Port Hole</h3>
+      <table id="phTable" >
+        <tr>
+        <!--  <td>Flat Location</td>
+          <td>Offset</td>
+          <td>Start Height</td>
+          <td>Stop Height</td>
+          <td>Width</td>
+          <td>Depth</td>-->
+        </tr>
+      </table>
+      <button class="button button-3d nomargin" id="portHole">Add Port Hole</button>
+		<hr>
+    </div>
+    <div class="col-sm-12 ">
+      <h3>Flat Plate</h3>
+      <table id="myTable">
+        <tr>
+         <!-- <td>Flat Location</td>
+          <td>Offset</td>
+          <td>Start Height</td>
+          <td>Stop Height</td>
+          <td>Width</td>
+          <td>Thickness</td>-->
+        </tr>
+      </table>
+      <button class="button button-3d nomargin" id="flatPlate">Add FlatPlate</button>
+		      <hr>
+    </div>
+    <div class="col-sm-12 ">
+      <h3>Plan View</h3>
+      <canvas id=bpCanvas> </canvas>
+      <br>
+      <button class="button button-3d nomargin" id="update">Update Diagram</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
