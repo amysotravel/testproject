@@ -1,0 +1,38 @@
+canvas {
+    border: 1px solid black;
+}
+/*input[type=number]{
+    margin-bottom: 1px;
+    margin-top: 1px;
+    width:10;
+    padding: 0px;
+    border-radius:5px;
+    border:1px solid black;
+}*/
+
+
+
+.container {
+    padding: 0px 30px 30px 30px;
+    border: 1px solid lightgray;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
+    margin: 20px;
+    vertical-align: middle;
+    align-content: center;
+    text-align: center;
+    background-color: #ECECEC;
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	.container 
+	{ padding:0px;	
+		  border: 0px solid lightgray;
+		 border-radius: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+		 margin: 0px;
+	}
+}
