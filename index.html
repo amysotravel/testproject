@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tower Mappings</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="java.js" async></script>
+    <link href= "style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<h1>Monopole Mappings</h1> 
+
+    <h2>Job Information</h2>
+    <input type="number" id="sgsJob" name="sgsJob">
+    <label for="sgsJob">SGS Job Number</label><br>
+    
+    
+    <h2>Base of tower Information</h2>
+    
+    <h3>Foundation Information</h3> 
+    <label for="fndShape">Foundation Shape</label>
+        <select name="fndShape" id="fndShape">
+            <option value="360">round</option>
+            <option value="4">4-sided</option>
+            <option value="6">6-sided</option>
+            <option value="8">8-sided</option>    
+        </select><br>
+    
+    <label for="fndMeasurmentType">Type of Measurement for Foundation Size</label>
+        <select name="fndMeasurementType" id="fndMeasurmentType">
+            <option value="0">Diameter flat to flat</option>
+            <option value="1">Diameter Point to Point</option>
+            <option value="2">Flat Width</option>    
+        </select>
+    
+    
+    <input type="number" id="fndDiaMeasurment" name="fndDiaMeasurment">
+    <label for="fndDiaMeasurment">in</label><br>
+    
+    <label for="fndThickness">Foundation projection above Ground</label>
+    <input type="number" id="fndThickness" name="fndThickness">
+    <label for="fndThickness">in</label><br>
+    
+ 
+    <h3>Baseplate Informaiton</h3>
+    <label for="bpShape">Baseplate Shape</label>
+        <select name="bpShape" id="bpShape">
+            <option value="360">round</option>
+            <option value="4">4-sided</option>
+            <option value="6">6-sided</option>
+            <option value="8">8-sided</option>    
+        </select><br>
+    
+    <label for="bpMeasurmentType">Type of Measurement for Baeplate Size</label>
+        <select name="bpMeasurementType" id="bpMeasurmentType">
+            <option value="0">Diameter flat to flat</option>
+            <option value="1">Diameter Point to Point</option>
+            <option value="2">Flat</option>    
+        </select>
+    
+    
+    <input type="number" id="bpDiaMeasurment" name="bpDiaMeasurment">
+    <label for="bpDiaMeasurment">in</label><br>
+    
+    <label for="bpThickness">Baseplate Thickness</label>
+    <input type="number" id="bpThickness" name="bpThickness">
+    <label for="bpThickness">in</label><br>
+   
+    <h3>Anchor Rod Information</h3>
+    
+    <label for="arQty">AR Quantity</label>
+    <input type="number" id="arQty" name="arQty">
+    <label for="arQty">ea</label><br>
+    
+    <label for="arDia">AR Dia</label>
+    <input type="number" id="arDia" name="arDia">
+    <label for="arDia">in</label><br>
+    
+   
+    <label for="arMeasurementType">Bolt Cirle type </label>
+        <select name="arMeasurementType" id="arMeasurementType">
+            <option value="1">Diameter</option>
+            <option value="2">Bolt to Bolt</option>    
+        </select>    
+    <input type="number" id="arDiaMeasurement" name="arDiaMeasurement">
+    <label for="arDiaMeasurement">in</label><br>
+    
+    
+
+<!--
+    <h3>Pole Information</h3>
+    <table id="pTable">
+        <tr><td>Shape</td><td>Evelation at Base</td><td>Type of Measurement</td><td>Measurement</td>
+            <td>Evelation at Top</td><td>Type of Measurement</td><td>Measurement</td></tr>
+    </table>
+    <button id="pole">Add Section</button>
+    <br>
+-->
+    
+    
+    
+    <h3>Pole Information</h3>
+    <label for="pShape">Pole Shape</label>
+        <select name="pShape" id="pShape">
+            <option value="360">round</option>
+            <option value="8">8-sided</option>
+            <option value="12">12-sided</option>
+            <option value="18">18-sided</option>    
+        </select><br>
+    
+    <label for="pMeasurmentType">Type of Measurement for Pole</label>
+        <select name="pMeasurementType" id="pMeasurmentType">
+            <option value="0">Diameter flat to flat</option>
+            <option value="1">Diameter Point to Point</option>
+            <option value="2">Flat Width</option>    
+        </select>
+    
+    
+    <input type="number" id="pDiaMeasurment" name="pDiaMeasurment">
+    <label for="pDiaMeasurment">in</label><br>
+    
+    
+    
+    
+    
+    
+    <h3>Port Hole</h3>
+    <table id="phTable">
+        <tr><td>Flat Location</td><td>Offset</td><td>Start Height</td><td>Stop Height</td><td>Width</td><td>Depth</td></tr>
+    </table>
+    <button id="portHole">Add Port Hole</button>
+    <br>
+    
+    
+
+    
+    <h3>Flat Plate</h3>
+    <table id="myTable">
+        <tr><td>Flat Location</td><td>Offset</td><td>Start Height</td><td>Stop Height</td><td>Width</td><td>Thickness</td></tr>
+    </table>
+    <button id="flatPlate">Add FlatPlate</button>
+    <br>
+    
+    
+    
+    <br><br><br>   
+    
+    <h3>Plan View</h3>
+    <canvas id=bpCanvas>
+        
+    </canvas><br>
+    <button id="update">Update Diagram</button>
+    
+    
+    
+    
+    
+    <br><br><br><br><br><br><br><br><br>
+    
+    
+<!--
+    <fieldset>
+        <legend>What is your favorite color</legend>
+    <input type="checkbox" name="favColor" value="blue" id="blue"><label for="blue">Blue</label><br>
+    <input type="checkbox" name="favColor" value="red" id="red"><label for="red">Red</label><br>
+    <input type="checkbox" name="favColor" value="green" id="green"><label for="green">Green</label><br>
+    </fieldset>
+-->
+    
+<!--
+    <label for="pizza">What is your favorite toppings?</label>
+    <select name="pizza" id="pizza" multiple>
+        <option value="mushroom">mushroom</option>
+        <option value="onion">onion</option>
+        <option value="pepperoni">pepperoni</option>
+        <option value="sausage">sausage</option>    
+    </select>
+-->
+    <br><br>
+<!--
+    
+    <label for="poem">Write a poem</label>
+    <textarea id="poem" name="poem"></textarea>
+    
+-->
+<!--
+    <label for="color">Color</label>
+    <input type="color" name="color" id="color">
+    <label for="resume">Upload your resume</label>
+    <input type="file" name="resume" id="resume" accept="image/*">
+-->
+    
+    
+    
+<!--    <br><input type="submit">-->
+    
+    
+</body>
+
+
+
+
+
+
+</html>
